@@ -67,5 +67,12 @@ public List<Employee> getMinSalary(@RequestBody Employee emp)
 	
 }
 
+ @GetMapping("/getmaxSalary")
+ public List<Employee> getMaxSalary(@RequestBody Employee e)
+ {
+ 	 List<Employee> list=esi.getMaxSalary(e);
+ 	return list;
+ 	
+ }
 
 }

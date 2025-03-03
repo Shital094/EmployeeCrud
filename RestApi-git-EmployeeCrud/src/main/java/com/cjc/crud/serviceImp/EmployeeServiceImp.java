@@ -45,6 +45,12 @@ public class EmployeeServiceImp implements EmployeeServiceI{
 		return er.getMin(emp);
 	}
 
+	@Override
+	public List<Employee> getMaxSalary(Employee e) {
+	
+		return er.getMxn(e);
+	}
+
 	
 
 	

@@ -14,6 +14,8 @@ public interface EmployeeRepository extends CrudRepository<Employee, Integer>{
 	List<Employee> findAllByUnameAndPassword(String uname, String pass);
 @Query("FROM Employee e WHERE e.salary = (SELECT MIN(e2.salary) FROM Employee e2)")
 	List<Employee> getMin(Employee emp);
+@Query("FROM Employee e WHERE e.salary = (SELECT MAX(e2.salary) FROM Employee e2)")
+List<Employee> getMxn(Employee e);
 
 
 }
