@@ -27,8 +27,11 @@ public class EmployeeServiceImp implements EmployeeServiceI{
 		
 		er.deleteById(eid);
 	}
-
-	
+	@Override
+	public void updateData(Employee emp)
+	{
+		er.save(emp);
+	}
 
 	
 
