@@ -58,10 +58,14 @@ public class EmployeeController {
 		 List<Employee> l= esi.getAllByUnameAndPassword(uname,pass);
 		 return l ;
 	 }
-
-	 
+}
+ @GetMapping("/getminSalary")
+public List<Employee> getMinSalary(@RequestBody Employee emp)
+{
+	 List<Employee> list=esi.getMinSalary(emp);
+	return list;
 	
 }
- 
-	
+
+
 }

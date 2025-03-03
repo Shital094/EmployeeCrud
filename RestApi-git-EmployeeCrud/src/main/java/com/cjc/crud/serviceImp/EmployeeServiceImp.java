@@ -39,6 +39,14 @@ public class EmployeeServiceImp implements EmployeeServiceI{
 		return er.findAllByUnameAndPassword(uname,pass);
 	}
 
+	@Override
+	public List<Employee> getMinSalary(Employee emp) {
+		
+		return er.getMin(emp);
+	}
+
+	
+
 	
 
 }
