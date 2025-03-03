@@ -1,8 +1,11 @@
 package com.cjc.crud.serviceImp;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cjc.crud.model.Employee;
 import com.cjc.crud.repository.EmployeeRepository;
 import com.cjc.crud.servicei.EmployeeServiceI;
 
@@ -11,4 +14,21 @@ public class EmployeeServiceImp implements EmployeeServiceI{
 
 	@Autowired
 	EmployeeRepository er;
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	@Override
+	public List<Employee> getAllData() {
+		
+		return (List<Employee>) er.findAll();
+	}
+
+	
 }
