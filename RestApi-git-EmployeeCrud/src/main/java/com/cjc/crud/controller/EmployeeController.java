@@ -32,7 +32,7 @@ public class EmployeeController {
  public String deleteData(@PathVariable("eid") int eid)
  {
 	 esi.deletedata(eid);
-	return null;
+	return "delete successfully";
 	 
  }
  
