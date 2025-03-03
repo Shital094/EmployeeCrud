@@ -38,6 +38,30 @@ public class EmployeeController {
 	return "delete successfully";
 	 
  }
+ @PutMapping("/updateData")
+ public String updateData(@RequestBody Employee emp)
+ {
+	 esi.updateData(emp);
+	return "update successfully";
+	 
+ }
+ @GetMapping("/getLoginCheck/{uname}/{password}")
+ 
+ public List<Employee> getByUnamePass(@PathVariable("uname") String uname,@PathVariable("password") String pass) 
+ {
+	 if(uname.equals("admin")&&pass.equals("admin"))
+	 {
+		List<Employee> list=esi.getAllData(); 
+		return list;
+	 }else
+	 {
+		 List<Employee> l= esi.getAllByUnameAndPassword(uname,pass);
+		 return l ;
+	 }
+
+	 
+	
+}
  
 	
 }

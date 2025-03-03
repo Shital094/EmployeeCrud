@@ -8,6 +8,8 @@ public interface EmployeeServiceI {
 	void postData(Employee e);
 List<Employee> getAllData();
 void deletedata(int eid);
+void updateData(Employee emp);
+List<Employee> getAllByUnameAndPassword(String uname, String pass);
 
 	
 

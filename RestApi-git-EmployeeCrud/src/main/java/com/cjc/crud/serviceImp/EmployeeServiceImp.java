@@ -27,8 +27,17 @@ public class EmployeeServiceImp implements EmployeeServiceI{
 		
 		er.deleteById(eid);
 	}
+	@Override
+	public void updateData(Employee emp)
+	{
+		er.save(emp);
+	}
 
-	
+	@Override
+	public List<Employee> getAllByUnameAndPassword(String uname, String pass) {
+		
+		return er.findAllByUnameAndPassword(uname,pass);
+	}
 
 	
 
