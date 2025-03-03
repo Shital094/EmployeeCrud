@@ -33,6 +33,12 @@ public class EmployeeServiceImp implements EmployeeServiceI{
 		er.save(emp);
 	}
 
+	@Override
+	public List<Employee> getAllByUnameAndPassword(String uname, String pass) {
+		
+		return er.findAllByUnameAndPassword(uname,pass);
+	}
+
 	
 
 }
