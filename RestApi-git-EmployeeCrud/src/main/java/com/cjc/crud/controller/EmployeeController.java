@@ -2,11 +2,16 @@ package com.cjc.crud.controller;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 =======
+=======
+import org.springframework.web.bind.annotation.DeleteMapping;
+>>>>>>> branch 'main' of https://github.com/Shital094/EmployeeCrud.git
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 >>>>>>> branch 'main' of https://github.com/Shital094/EmployeeCrud.git
@@ -46,6 +51,13 @@ public class EmployeeController {
  {
 	List<Employee> list= esi.getAllData();
 	return list;
+	 
+ }
+ @DeleteMapping("deleteData/{eid}")
+ public String deleteData(@PathVariable("eid") int eid)
+ {
+	 esi.deletedata(eid);
+	return "delete successfully";
 	 
  }
  
