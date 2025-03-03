@@ -27,10 +27,32 @@ public class EmployeeServiceImp implements EmployeeServiceI{
 		
 		er.deleteById(eid);
 	}
+
 	 @Override
 	    public Employee getDataById(int eid) {
 	        return er.findById(eid).orElse(null); // Returns null if employee is not found
 	    }
+
+	@Override
+	public void updateData(Employee emp)
+	{
+		er.save(emp);
+	}
+
+	@Override
+	public List<Employee> getAllByUnameAndPassword(String uname, String pass) {
+		
+		return er.findAllByUnameAndPassword(uname,pass);
+	}
+
+	@Override
+	public List<Employee> getMinSalary(Employee emp) {
+		
+		return er.getMin(emp);
+	}
+
+	
+
 
 	
 

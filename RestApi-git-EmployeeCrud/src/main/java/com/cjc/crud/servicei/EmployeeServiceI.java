@@ -9,6 +9,10 @@ public interface EmployeeServiceI {
 List<Employee> getAllData();
 Employee getDataById(int eid);
 void deletedata(int eid);
+void updateData(Employee emp);
+List<Employee> getAllByUnameAndPassword(String uname, String pass);
+List<Employee> getMinSalary(Employee emp);
+
 
 	
 
