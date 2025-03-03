@@ -24,6 +24,12 @@ public class EmployeeServiceImp implements EmployeeServiceI{
 		return (List<Employee>) er.findAll();
 	}
 
+	@Override
+	public void deletedata(int eid) {
+		
+		er.deleteById(eid);
+	}
+
 	
 
 }
