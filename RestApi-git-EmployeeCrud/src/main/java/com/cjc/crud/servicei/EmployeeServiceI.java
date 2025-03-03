@@ -7,6 +7,7 @@ import com.cjc.crud.model.Employee;
 public interface EmployeeServiceI {
 	void postData(Employee e);
 List<Employee> getAllData();
+Employee getDataById(int eid);
 void deletedata(int eid);
 
 	

@@ -40,6 +40,8 @@ public class EmployeeController {
 	return "delete successfully";
 	 
  }
- 
-
+ @GetMapping("/getDataById/{eid}")
+ public Employee getDataById(@PathVariable("eid") int eid) {
+     return esi.getDataById(eid);
+ }
 }

@@ -27,8 +27,10 @@ public class EmployeeServiceImp implements EmployeeServiceI{
 		
 		er.deleteById(eid);
 	}
-
-	
+	 @Override
+	    public Employee getDataById(int eid) {
+	        return er.findById(eid).orElse(null); // Returns null if employee is not found
+	    }
 
 	
 
