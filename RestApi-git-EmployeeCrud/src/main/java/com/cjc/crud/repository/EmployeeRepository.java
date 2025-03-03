@@ -16,6 +16,7 @@ public interface EmployeeRepository extends CrudRepository<Employee, Integer>{
 	List<Employee> getMin(Employee emp);
 @Query("FROM Employee e WHERE e.salary = (SELECT MAX(e2.salary) FROM Employee e2)")
 List<Employee> getMxn(Employee e);
-
+@Query("SELECT AVG(e.salary) FROM Employee e")
+Double findAverageSalary();
 
 }

@@ -80,5 +80,8 @@ public List<Employee> getMinSalary(@RequestBody Employee emp)
  	return list;
  	
  }
-
+ @GetMapping("/averageSalary")  
+ public Double getAverageSalary() {
+     return esi.getAverageSalary();
+ }
 }

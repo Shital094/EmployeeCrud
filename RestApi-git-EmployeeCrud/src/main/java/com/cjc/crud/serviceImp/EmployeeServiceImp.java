@@ -57,7 +57,10 @@ public class EmployeeServiceImp implements EmployeeServiceI{
 		return er.getMxn(e);
 	}
 
-	
+	 @Override
+	    public Double getAverageSalary() {
+	        return er.findAverageSalary();
+	    }
 
 
 	

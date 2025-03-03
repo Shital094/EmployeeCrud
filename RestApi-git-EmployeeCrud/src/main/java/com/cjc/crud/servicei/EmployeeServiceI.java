@@ -13,6 +13,7 @@ void updateData(Employee emp);
 List<Employee> getAllByUnameAndPassword(String uname, String pass);
 List<Employee> getMinSalary(Employee emp);
 List<Employee> getMaxSalary(Employee e);
+Double getAverageSalary();
 
 
 	
