@@ -85,3 +85,4 @@ public List<Employee> getMinSalary(@RequestBody Employee emp)
      return esi.getAverageSalary();
  }
 }
+
